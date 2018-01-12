@@ -51,7 +51,6 @@ def test_quicksort():
 
     x = np.array([1,2,4,0,1])
     sort = algs.quicksort(x, 0, len(x) - 1)[0]
-    print("SSS", sort)
     assert np.array_equal(sort, np.array([0,1,1,2,4]))
 
     y = ['b', 'c', 'a', 'a', 'd', 'a']
