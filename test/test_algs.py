@@ -27,9 +27,6 @@ def test_bubblesort():
     # failing, (2) does your code handle characters?
 
     x = np.array([1,2,4,0,1])
-    
-    # for now, just attempt to call the bubblesort function, should
-    # actually check output
     sort = algs.bubblesort(x)[0]
     assert np.array_equal(sort, np.array([0,1,1,2,4]))
     assert np.array_equal(sort, np.array([0,1,1,2,4]))
@@ -37,6 +34,10 @@ def test_bubblesort():
     y = ['b', 'c', 'a', 'a', 'd', 'a']
     sort = algs.bubblesort(y)[0]
     assert np.array_equal(sort, np.array(['a','a','a','b','c','d']))
+
+    x = np.array([])
+    sort = algs.bubblesort(x)[0]
+    assert np.array_equal(sort, np.array([]))
 
     x = np.array([1])
     sort = algs.bubblesort(x)[0]
@@ -48,6 +49,10 @@ def test_bubblesort():
 
 
 def test_quicksort():
+
+    x = np.array([])
+    sort = algs.quicksort(x, 0, len(x) - 1)[0]
+    assert np.array_equal(sort, np.array([]))
 
     x = np.array([1,2,4,0,1])
     sort = algs.quicksort(x, 0, len(x) - 1)[0]
