@@ -1,6 +1,7 @@
 import numpy as np
 from example import algs
 
+
 def test_pointless_sort():
     # generate random vector of length 10
     x = np.random.rand(10)
@@ -29,11 +30,43 @@ def test_bubblesort():
     
     # for now, just attempt to call the bubblesort function, should
     # actually check output
-    algs.bubblesort(x)
+    sort = algs.bubblesort(x)[0]
+    assert np.array_equal(sort, np.array([0,1,1,2,4]))
+    assert np.array_equal(sort, np.array([0,1,1,2,4]))
+
+    y = ['b', 'c', 'a', 'a', 'd', 'a']
+    sort = algs.bubblesort(y)[0]
+    assert np.array_equal(sort, np.array(['a','a','a','b','c','d']))
+
+    x = np.array([1])
+    sort = algs.bubblesort(x)[0]
+    assert np.array_equal(sort, np.array([1]))
+
+    x = np.array([1,4,2,3])
+    sort = algs.bubblesort(x)[0]
+    assert np.array_equal(sort, np.array([1,2,3,4]))
+
 
 def test_quicksort():
 
     x = np.array([1,2,4,0,1])
-    # for now, just attempt to call the quicksort function, should
-    # actually check output
-    algs.quicksort(x)
+    sort = algs.quicksort(x, 0, len(x) - 1)[0]
+    print("SSS", sort)
+    assert np.array_equal(sort, np.array([0,1,1,2,4]))
+
+    y = ['b', 'c', 'a', 'a', 'd', 'a']
+    sort = algs.quicksort(y, 0, len(y) - 1)[0]
+    assert np.array_equal(sort, np.array(['a','a','a','b','c','d']))
+
+    x = np.array([1])
+    sort = algs.quicksort(x, 0, len(x) - 1)[0]
+    assert np.array_equal(sort, np.array([1]))
+
+    x = np.array([1,4,2,3])
+    sort = algs.quicksort(x, 0, len(x) - 1)[0]
+    assert np.array_equal(sort, np.array([1,2,3,4]))
+
+
+
+
+    
