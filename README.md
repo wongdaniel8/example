@@ -3,6 +3,8 @@
 [![Build
 Status](https://travis-ci.org/wongdaniel8/example.svg?branch=master)](https://travis-ci.org/wongdaniel8/example)
 
+Travis: https://travis-ci.org/wongdaniel8/example
+
 Example python project with testing.
 
 ## usage
